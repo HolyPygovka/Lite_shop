@@ -1,0 +1,16 @@
+.col.col-md-3.col-xs-12
+    .one_card
+        a(href="/goods-page?id="+val['id'])
+            p.title #{val['name']}
+            p.img
+                img(
+                    src="img/" + val['image']
+                )
+            p.description #{val['description']}
+            p.cost #{val['cost'].toFixed(2)} руб.
+        .btn_block
+            a(
+                href="#"
+                class="btn tocart"
+                product_id=val['id']
+            ) to cart

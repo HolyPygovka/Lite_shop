@@ -1,0 +1,25 @@
+include head
+include main_nav
+include site_header
+.main_content
+    .container
+        .row
+            .col
+                .one_goods_block
+                    .page_title
+                        h2 #{one_goods[0]['name']}
+                    .card_row
+                        .img_block
+                            img(
+                                src="img/" + one_goods[0]['image']
+                            )
+                        .text_block
+                            .description
+                                p #{one_goods[0]['description']}
+                            .price_block
+                                p Цена: #{one_goods[0]['cost'].toFixed(2)} руб.
+                            .to_cart_block
+                                a.btn.tocart(
+                                    href="#"
+                                ) to cart
+include footer

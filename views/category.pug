@@ -1,0 +1,13 @@
+include head
+include main_nav
+include site_header
+.main_content
+    .container
+        .row
+            .col
+                .page_title
+                    h2 #{cat[0]['category']}
+        .row
+            each val, index in goods
+                include card
+include footer
